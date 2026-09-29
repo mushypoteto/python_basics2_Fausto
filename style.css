@@ -4,14 +4,15 @@
   padding: 0;
 }
 :root {
-  --bg: #090b0e;
-  --surface: #11151a;
-  --surface2: #171c22;
-  --text: #f4f6f8;
-  --muted: #9ba5af;
-  --accent: #c9ff32;
-  --border: #293139;
-  --code: #080a0d;
+  --bg: #080808;
+  --surface: #11100e;
+  --surface2: #181512;
+  --text: #f5f1e8;
+  --muted: #aaa39a;
+  --accent: #d4af37;
+  --red: #a52a2a;
+  --border: #302a20;
+  --code: #050505;
 }
 html {
   scroll-behavior: smooth;
@@ -67,16 +68,8 @@ nav a:hover {
   align-items: center;
   border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(
-      circle at 80% 30%,
-      rgba(201, 255, 50, 0.09),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 20% 70%,
-      rgba(80, 110, 255, 0.06),
-      transparent 25%
-    );
+  radial-gradient(circle at 80% 30%, rgba(212,175,55,.10), transparent 28%),
+  radial-gradient(circle at 20% 70%, rgba(165,42,42,.06), transparent 25%);
 }
 .hero-grid {
   display: grid;
@@ -324,4 +317,18 @@ footer strong {
     min-height: 560px;
     height: 560px;
   }
+  /* Subtle red accents */
+.eyebrow::before {
+  content: "•";
+  color: var(--red);
+  margin-right: 7px;
+}
+
+.lesson:nth-child(5n) .number {
+  color: var(--red);
+}
+
+.lesson:nth-child(5n) {
+  border-top: 2px solid rgba(165, 42, 42, 0.55);
+}
 }
